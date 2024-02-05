@@ -1,0 +1,68 @@
+{% extends 'dashboard-layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Rain Guage Sensors</h1>
+        <nav>
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'dashboard-home'%}">Home</a></li>
+            <li class="breadcrumb-item">Sensor</li>
+            <li class="breadcrumb-item active">Rain Guage</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Rain Guage - La Trinidad</h5>
+                <!-- List of Soil Parameters -->
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date and Time</th>
+                      <th scope="col">Rainfall</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">16/11/2022 16:00</td>
+                      <td>10</td>
+                      <td>Low</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">16/11/2022 20:00</td>
+                      <td>250</td>
+                      <td>High</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">16/11/2022 22:00</td>
+                      <td>45</td>
+                      <td>Low</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">16/12/2022 16:00</td>
+                      <td>150</td>
+                      <td>High</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">17/12/2022 20:00</td>
+                      <td>79</td>
+                      <td>Moderate</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End List of Soil Parameters -->
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+{% endblock content %}

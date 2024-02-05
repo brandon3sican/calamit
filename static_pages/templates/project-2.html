@@ -1,0 +1,545 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block og_image %}
+  <meta property="og:image" content="{% static 'assets/img/projects/calamit-logo.webp' %}" />
+  <meta property="og:image:width" content="200" />
+  <meta property="og:image:height" content="200" />
+{% endblock og_image %}
+
+{% block navstatus2 %} active {% endblock navstatus2 %}
+
+{% block content %}
+
+<!-- ======= Hero Section ======= -->
+<section class="hero d-flex align-items-center" id="project2-banner">
+  <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <img src="{% static 'assets/img/projects/calamit-logo.webp' %}" class="img-fluid" alt="">
+      <h1>PROJECT 2</h1>
+      <h2>CALaMI-T Cordillera Administrative Landslide Monitoring Integrated Toolbox</h2>
+    </div>
+</section>
+<!-- ======= End Hero Section ======= -->
+
+<main id="main">
+
+  <!-- ======= Partners Section ======= -->
+  <section id="partners" class="partners section-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="300">
+          <a href="https://www.uc-bcf.edu.ph/"><img src="{% static 'assets/img/partners/uc-logo.webp' %}" class="img-fluid" alt=""></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://ubaguio.edu/"><img src="{% static 'assets/img/partners/ub-logo.webp' %}" class="img-fluid" alt=""></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <a href="#"><img src="{% static 'assets/img/partners/blistt-logo.webp' %}" class="img-fluid" alt=""></a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="500">
+          <a href="https://www.dost.gov.ph/"><img src="{% static 'assets/img/partners/dost-logo.webp' %}" class="img-fluid" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Partners Section ======= -->
+
+  <!-- ======= Project Overview Section ======= -->
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1 Project Overview -->
+        <div class="col-lg-6">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Project Overview</h2>
+            <p>Project CALaMI-T is a landslide mitigation researc and development for BLISTT. It aims to develop a landslide movement model toolbox that can predict landslides and provide information on the impact of rain-induced landslides on communities, infrastructure, and the environment.</p>
+            <p>It is the Project 2 under the Program MULAT BLISTT: Modelling and Understanding LAndslide evenTs in Baguio-La Trinidad-Itogon-Sablan-Tuba-Tublay.</p>
+          </div>
+        </div>
+        <!-- End Column 1 Project Name -->
+
+        <!-- Column 2 Project Video -->
+        <div class="col-lg-6 d-flex justify-content-end">
+          <div class="ratio ratio-16x9" data-aos="zoom-in">
+            <video width="400" height="350" controls poster="{% static 'assets/img/projects/calamit-logo.webp' %}">
+              <source src="https://www.youtube.com/embed/sVPYIRF9RCQ" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- End Column 2 Project Video -->
+
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Project Overview Section ======= -->
+
+  <!-- 
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-12">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Project Objectives</h2>
+            <ul>
+              <li>Determine soil moisture threshold values and other parameters for landslide;</li>
+              <li>Develop or adopt a suitable landslide movement model toolbox software;</li>
+              <li>Develop and testing of a landslde management information system;</li>
+              <li>Develop a mobile application for landslide warning and awareness, reporting and routing to evacuation areas or safe spots;</li>
+              <li>Develop a Web and SMS based early warning system with DRRMO Operation Center Dashboard.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  -->
+  
+  <!-- ======= Services Section ======= -->
+  <!-- ======= Project Goals Section ======= -->
+    <section class="services"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Project Goals</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row goals">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4>Soil Moisture Threshold</h4>
+            <p>Determine soil moisture threshold values and other parameters for landslide.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon"><i class="bx bx-package"></i></div>
+            <h4>Landslide Movement Model Toolbox Software</h4>
+            <p>Develop or adopt a suitable landslide movement model toolbox software.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon"><i class="bx bx-landscape"></i></div>
+            <h4>Landsilde Management Information System</h4>
+            <p>Develop and testing of a landslde management information system.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon"><i class="bx bx-mobile"></i></div>
+            <h4>Mobile Application for Landslide</h4>
+            <p>Develop a mobile application for landslide warning and awareness, reporting and routing to evacuation areas or safe spots.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon"><i class="bx bx-alarm-exclamation"></i></div>
+            <h4>Early Warning System</h4>
+            <p>Develop a Web and SMS based early warning system with DRRMO Operation Center Dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Project Goals Section -->
+  <!-- ======= End Services Section ======= -->
+  
+    <!-- ======= Gallery Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-title" data-aos="fade-left">
+        <h2>Gallery</h2>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-meetings">Meeting</li>
+            <li data-filter=".filter-fieldworks">Fieldworks</li>
+            <li data-filter=".filter-sites">Sites</li>
+            <li data-filter=".filter-trainings">Trainings</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-trainings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/train-gis-dost.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Training</h4>
+              <p>GIS Training</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/train-gis-dost.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="GIS Training with DOST-NRCP RD Lead Program"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-trainings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/train-asti-dost.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Training</h4>
+              <p>DOST-ASTI Training</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/train-asti-dost.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DOST-ASTI Training"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-fieldworks">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/fldwrk-kibungan.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Fieldwork</h4>
+              <p>Little Kibungan Survey</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/fldwrk-kibungan.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Little Kibungan Survey"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-meetings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/mtng-cdrrmo-bag.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Meeting</h4>
+              <p>Meeting with Baguio City-CDRRMO</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/mtng-cdrrmo-bag.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meeting with Baguio City-City Disaster Risk Reduction Management Office (CDRRMO)"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-lg-3 col-md-6 portfolio-item filter-meetings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/moa-ltb.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Meeting</h4>
+              <p>MOA Signing with LTB LGU</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/moa-ltb.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Memorandum Of Agreement (MOA) Signing with La Trinidad Benguet LGU"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-fieldworks">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/fldwrk-oi-bag.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Fieldwork</h4>
+              <p>Occular Inspection in Baguio City</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/fldwrk-oi-bag.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Occular Inspection at selected Barangays in Baguio City. Barangay Dominican-Mirador, Irisan and Pucsusan."><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-sites">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/mtng-sb-tublay.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Meeting</h4>
+              <p>Tublay SB Meeting</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/mtng-sb-tublay.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tublay SB Meeting"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-sites">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/train-drone.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Training</h4>
+              <p>Drone Operation Training</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/train-drone.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Drone Operation Training"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-sites">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/sites-itogon.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Site</h4>
+              <p>Itogon Site</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/sites-itogon.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Itogon Site"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-sites">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/sites-sablan.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Site</h4>
+              <p>Sablan Site</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/sites-sablan.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sablan Site"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-sites">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/sites-tuba.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Site</h4>
+              <p>Tuba Site</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/sites-tuba.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tuba Site"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-sites">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/sites-tublay.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Site</h4>
+              <p>Tublay Site</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/sites-tublay.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tublay Site"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-fieldworks"> 
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/fldwrk-itogon-sws.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Fieldwork</h4>
+              <p>Itogon SWS</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/fldwrk-itogon-sws.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Itogon SWS"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-sites">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/sites-sablan-mayor.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Site</h4>
+              <p>Sablan Site with Mayor</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/sites-sablan-mayor.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sablan Site with Mayor"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-sites">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/sites-baguio.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Site</h4>
+              <p>Baguio Site</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/sites-baguio.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Baguio Site"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-fieldworks filter-meetings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/mtng-fldwrk-ltb.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Meeting and Fieldwork</h4>
+              <p>Meeting and fieldwork in La Trinidad, Benguet</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/mtng-fldwrk-ltb.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meeting and fieldwork in La Trinidad, Benguet"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-meetings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/mtng-sablan.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Meeting</h4>
+              <p>Meeting with Sablan</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/mtng-sablan.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meeting with Sablan"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-fieldworks filter-meetings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/mtng-fldwrk-rst.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Meeting and Fieldwork</h4>
+              <p>Coordination Meeting and RST</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/mtng-fldwrk-rst.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Coordination Meeting and RST"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-meetings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/mtng-itogon.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Meeting</h4>
+              <p>Coordination Meeting with Itogon LGU</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/mtng-itogon.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Coordination Meeting with Itogon LGU"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-meetings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/mtng-tublay.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Meeting</h4>
+              <p>Coordination Meeting with Tublay LGUs</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/mtng-tublay.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Coordination Meeting with Tublay LGUs"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-trainings">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/gallery/project-2/train-ipi.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Training</h4>
+              <p>Training and Testing of IPI</p>
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/gallery/project-2/train-ipi.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Training and Testing of IPI"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Gallery Section ======= -->
+
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title">
+            <h2>Team</h2>
+            <p></p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="row">
+
+            <div class="col-lg-4 mb-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pic"><img src="{% static 'assets/img/team/nvl.webp' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Engr. Nathaniel Vincent A. Lubrica</h4>
+                  <span>Project Leader</span>
+                  <p>University of the Cordilleras</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pic"><img src="{% static 'assets/img/team/project-2/Almuete.jpg' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Engr. Rolette R. Almuete</h4>
+                  <span>Project Technical Specialist I</span>
+                  <p>University of the Cordilleras</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                <div class="pic"><img src="{% static 'assets/img/team/project-2/christian.jpg' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Christian Robert M. Sandoval</h4>
+                  <span>Project Technical Assistant IV</span>
+                  <p>University of the Cordilleras</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                <div class="pic"><img src="{% static 'assets/img/team/project-2/Megan.jpg' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Megan R. Nabua</h4>
+                  <span>Project Staff I</span>
+                  <p>University of the Cordilleras</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                <div class="pic"><img src="{% static 'assets/img/team/project-2/JR.jpg' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Engr. John Russel E. Torchangon</h4>
+                  <span>Project Technical Assistant II</span>
+                  <p>University of the Cordilleras</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                <div class="pic"><img src="{% static 'assets/img/team/project-2/Esican.jpg' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Brandon E. Esican</h4>
+                  <span>Project Technical Assistant II</span>
+                  <p>University of the Cordilleras</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Team Section -->
+
+</main><!-- End #main -->
+
+{% endblock content %}

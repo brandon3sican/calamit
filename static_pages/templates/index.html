@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block og_image %}
+  <meta property="og:image" content="{% static 'assets/img/projects/calamit-logo.webp' %}" />
+  <meta property="og:image:width" content="200" />
+  <meta property="og:image:height" content="200" />
+{% endblock og_image %}
+
+{% block content %}
+<!-- ======= Hero Section ======= -->
+<section id="home" class="hero d-flex align-items-center">
+  <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>MULAT-BLISTT Program</h1>
+      <h2>Modelling and Understanding LAndslide evenTs in Baguio-La Trinidad-Itogon-Sablan-Tublay</h2>
+      <a href="#program" class="btn-get-started scrollto">Read More</a>
+    </div>
+</section>
+<!-- ======= End Hero Section ======= -->
+
+<main id="main">
+
+  <!-- ======= Partners Section ======= -->
+  <section id="partners" class="partners section-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="400">
+          <img src="{% static 'assets/img/partners/upb-logo.webp' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="600">
+          <img src="{% static 'assets/img/partners/mgb-logo.webp' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="300">
+          <img src="{% static 'assets/img/partners/uc-logo.webp' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'assets/img/partners/ub-logo.webp' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <img src="{% static 'assets/img/partners/blistt-logo.webp' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="500">
+          <img src="{% static 'assets/img/partners/dost-logo.webp' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Partners Section ======= -->
+
+  <!-- ======= Program Section ======= -->
+  <section id="program" class="program bg-light">
+    <div class="container">
+      <div class="row content">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <h2>MULAT-BLISTT Research Program</h2>
+          <h3>Towards a Safer Tomorrow</h3>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
+          <p>The research program was designed to produce up-to-date, high resolution information on Rainfall-Induced Landslides (RIL) in order to lower and prevent risks and losses in lives, livelihoods, health, community assets, and environmental quality. It was also intended to provide information for policies for early warning, evacuation, and development planning. Its goals are to support disaster mitigation and to strengthen disaster resilience.</p>
+          <ul>
+            <li><i class="ri-arrow-right-circle-fill"></i> <strong>Project 1:</strong> Modelling Susceptibility and Generating Rainfall-Threshold for Rainfall-Induced Landslide</li>
+            <li><i class="ri-arrow-right-circle-fill"></i> <strong>Project 2:</strong> CALAMI-T - Cordillera Administrative LAndslide Monitoring Integrated Toolbox</li>
+          </ul>
+          <p class="fst-italic">The MULAT-BLISTT research program is a two-part collaboration of the the (UP-Baguio) University of the Philippines Baguio-(MGB-CAR) Mines and Geosciences Bureau-CAR, (UC) University of the Cordilleras-(UB) University of Baguio and the (DOST-PCIEERD) Department of Science and Technology Philippine Council for Industry, Energy, Emerging Technology Research & Development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Program Section ======= -->
+
+  <!-- ======= Services Section ======= -->
+
+  <!-- ======= Project 1 Section ======= -->
+  <section id="project1" class="services">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1 Project Name -->
+        <div class="col-lg-4">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Project 1</h2>
+            <h3>Modelling Susceptibility and Generating Rainfall-Threshold for Rainfall-Induced Landslide</h3>
+            <p>One of the most exposed areas to rainfall-induced landslides is the BLISTT area of the Cordillera Administrative Region, which experienced nine out of ten of the country's greatest 24-hour rainfall totals during tropical cyclones.</p>
+            <p>The MULAT-BLISTT, which stands for Modelling and Understanding Landslide Events in BLISTT (Baguio, La Trinidad, Itogon, Sablan, Tuba, Tublay), is a research program funded by the DOST-PCIEERD. The program's objective is to increase disaster resilience in accordance with R.A. 10121, the "Philippine Disaster Risk Reduction and Management Act of 2010," and the UN 2030 Sustainable Development Goal.</p>
+            <a href="{% url 'project-1' %}" class="btn-learn-more">Read More</a>
+          </div>
+        </div>
+        <!-- End Column 1 Project Name -->
+
+        <!-- Column 2 Project Details -->
+        <div class="col-lg-8">
+          
+          <div class="row goals">
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon"><i class="bx bx-receipt"></i></div>
+                <h4>Catalogue of rainfall, extreme rainfall, and typhoon occurrence.</h4>
+                <p>The catalogue summarizes rainfall, extreme rainfall events, and typhoon occurrences over the past two decades.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon"><i class="bx bx-receipt"></i></div>
+                <h4>Catalogue and Database of Landslide reports.</h4>
+                <p>The Catalogue and Database compiles comprehensive landslide reports for analysis and mitigation.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4>Rainfall Threshold for Landslides</h4>
+                <p>The rainfall threshold for a landslide can vary depending on factors like soil type and terrain.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="bx bx-landscape"></i></div>
+                <h4>Landslide Susceptibility, Vulnerability and Risk Maps</h4>
+                <p>Assess and mitigate the potential for landslides in a given area.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"> 
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="bx bx-pencil"></i></div>
+                <h4>Publication of Journals</h4>
+                <p>Journals are published to disseminate the latest research findings and promote academic discourse.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- End Column 2 Project Details -->
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Project 1 Section ======= -->
+
+
+  <!-- ======= Project 2 Section ======= -->
+  <section class="services bg-light" id="project2">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1 Project Name -->
+        <div class="col-lg-4">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Project 2</h2>
+            <h3>CALaMI-T - Cordillera Administrative Landslide Monitoring Integrated Toolbox</h3>
+            <p>Project CALaMI-T is a landslide mitigation researc and development for BLISTT. It aims to develop a landslide movement model toolbox that can predict landslides and provide information on the impact of rain-induced landslides on communities, infrastructure, and the environment.</p>
+            <p>It is the Project 2 under the Program MULAT BLISTT: Modelling and Understanding LAndslide evenTs in Baguio-La Trinidad-Itogon-Sablan-Tuba-Tublay.</p>
+            <!--<div class="pics"><img src="static/assets/img/projects/calamit-logo.webp" class="img-fluid" alt=""></div>-->
+            <a href="{% url 'project-2' %}" class="btn-learn-more">Read More</a>
+          </div>
+        </div>
+        <!-- End Column 1 Project Name -->
+
+        <!-- Column 2 Project Details -->
+        <div class="col-lg-8">
+          
+          <div class="row goals">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4>Soil Moisture Threshold</h4>
+                <p>Determine soil moisture threshold values and other parameters for landslide.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon"><i class="bx bx-package"></i></div>
+                <h4>Landslide Movement Model Toolbox Software</h4>
+                <p>Develop or adopt a suitable landslide movement model toolbox software.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon"><i class="bx bx-landscape"></i></div>
+                <h4>Landsilde Management Information System</h4>
+                <p>Develop and testing of a landslde management information system.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="bx bx-mobile"></i></div>
+                <h4>Mobile Application for Landslide</h4>
+                <p>Develop a mobile application for landslide warning and awareness, reporting and routing to evacuation areas or safe spots.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="bx bx-alarm-exclamation"></i></div>
+                <h4>Early Warning System</h4>
+                <p>Develop a Web and SMS based early warning system with DRRMO Operation Center Dashboard.</p>
+              </div>
+            </div>
+
+        </div>
+        <!-- End Column 2 Project Details -->
+
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Project 2 Section ======= -->
+
+  <!-- ======= End Services Section ======= -->
+
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title">
+            <h2>Team Leads</h2>
+            <p>DOST-CAR, Mines and Geosciences Bureau-Cordillera, University of the Philippines Baguio, University of the Cordilleras, and University of Baguio work together in the implementation of the “Modelling and Understanding Landslide Events in BLISTT (Baguio, La Trinidad, Itogon, Sablan, Tuba, Tublay) (MULAT-BLISTT) Program”. </p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="row">
+
+            <div class="col-lg-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pic"><img src="{% static 'assets/img/team/team1.jpg' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Dr. Dymphna Javier</h4>
+                  <span>Project 1 Leader</span>
+                  <p>University of the Philippines - Baguio</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                <div class="pic"><img src="{% static 'assets/img/team/fa.webp' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>R.D. Fay Apil</h4>
+                  <span>Project 1 Leader</span>
+                  <p>DENR - Mines and Geosciences Bureau CAR</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                <div class="pic"><img src="{% static 'assets/img/team/nvl.webp' %}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Engr. Nathaniel Vincent A. Lubrica</h4>
+                  <span>Project 2 Leader</span>
+                  <p>University of the Cordilleras</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Team Section -->
+
+</main><!-- End #main -->
+
+{% endblock content %}

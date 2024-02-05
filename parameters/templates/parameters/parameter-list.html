@@ -1,0 +1,363 @@
+{% extends 'dashboard-layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Parameters</h1>
+        <!-- Breadcrumb-->
+        <nav>
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'dashboard-home'%}">Home</a></li>
+            <li class="breadcrumb-item">Parameters</li>
+            <li class="breadcrumb-item active">List</li>
+            </ol>
+        </nav><!-- End Breadcrumb-->
+    </div>
+
+    <section class="section">
+      <!-- Add Modal (Parameters) -->
+      <div class="modal fade" id="add_modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add Parameters</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Add Form (Parameters) -->
+            <form class="row g-3" id="add_form">
+            <div class="modal-body">
+                <div class="col-md-12">
+                  <label for="parameter" class="form-label">Parameter</label>
+                  <input type="text" class="form-control" name="parameter_name">
+                </div>
+                <div class="col-12">
+                  <label for="description" class="form-label">Description</label>
+                  <textarea class="form-control" style="height: 100px" name="description"></textarea>
+                </div>
+                <div class="col-md-12">
+                  <label for="unit_of_measurement" class="form-label">Unit of Measurement</label>
+                  <input type="text" class="form-control" name="measurement_unit">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+            </form><!-- End Add Form (Parameters) -->
+          </div>
+        </div>
+      </div><!-- End Add Modal (Parameters)-->
+
+      <!-- Edit Modal (Parameters) -->
+      <div class="modal fade" id="edit_modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit Parameter</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Edit Form (Parameters) -->
+            <form class="row g-3" id="edit_form">
+            <div class="modal-body">
+                <div class="col-md-12">
+                  <input type="hidden" class="form-control" name="id" id="id">
+                </div>
+                <div class="col-md-12">
+                  <label for="parameter" class="form-label">Parameter</label>
+                  <input type="text" class="form-control" name="parameter_name" id="parameter_name">
+                </div>
+                <div class="col-12">
+                  <label for="description" class="form-label">Description</label>
+                  <textarea class="form-control" style="height: 100px" name="description" id="description"></textarea>
+                </div>
+                <div class="col-md-12">
+                  <label for="unit_of_measurement" class="form-label">Unit of Measurement</label>
+                  <input type="text" class="form-control" name="measurement_unit" id="measurement_unit">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button class="btn btn-primary" type="submit">Save changes</button>
+            </div>
+            </form><!-- End Edit Form (Parameters) -->
+          </div>
+        </div>
+      </div><!-- End Edit Modal (Parameters)-->
+
+      
+      <div class="row">
+        <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Soil Parameters &nbsp&nbsp
+              <i class="bi bi-plus-circle-fill text-success" type="button" data-bs-toggle="modal" data-bs-target="#add_modal"></i></h5>
+              <!-- List of Soil Parameters -->
+              <table class="table table-hover" id="parameter_table">
+                <thead>
+                  <tr>
+                    <th scope="col">Parameters</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Unit of Measurement</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for parameter in parameters %}
+                    <tr id="parameter-{{parameter.id}}">
+                        <td class="parameterName parameterData" name="parameter_name">{{parameter.parameter_name}}</td>
+                        <td class="parameterDescription parameterData" name="description">{{parameter.description}}</td>
+                        <td class="parameterMeasurementUnit parameterData" name="measurement_unit">{{parameter.measurement_unit}}</td>
+                        <td>
+                            <i class="bi bi-eye-fill text-success" type="button"></i> &nbsp
+                            <i class="bi bi-pencil-fill text-primary" type="button" onClick="editParameter({{parameter.id}})" data-bs-toggle="modal" data-bs-target="#edit_modal"></i> &nbsp
+                            <i class="bi bi-trash-fill text-warning" onClick="deleteParameter({{parameter.id}})" type="button"></i>
+                        </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              <!-- End List of Soil Parameters -->
+              
+              <!-- Pagination -->
+              {% if page_obj.has_other_pages %}
+                <ul class="pagination">
+                  <!-- Go to Previous Page -->
+                  {% if page_obj.has_previous %}
+                    <li class="page-item">
+                      <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                    </li>
+                  {% else %}
+                    <li class="page-item disabled"><a class="page-link"><span aria-hidden="true">&laquo;</span></a></li>
+                  {% endif %} 
+
+                  <!-- Page Numbers -->
+                  {% for page_number in paginator.page_range %}
+                    {% if page_number == page_obj.number %}
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+                      </li>
+                    {% else %}
+                      <li class="page-item"><a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+
+                  <!-- Go to Next Page -->
+                  {% if page_obj.has_next %}
+                    <li class="page-item">
+                      <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next"><span aria-hidden="true">&raquo;</a>
+                    </li>
+                  {% else %}
+                    <li class="page-item disabled"><a class="page-link"><span aria-hidden="true">&raquo;</span></a></li>
+                  {% endif %}
+                </ul>
+              {% endif %}
+              <!-- End of Pagination -->
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+</main>
+{% endblock content %}
+
+{% block javascript %}
+<script>
+//create and store
+$("#add_form").on('submit',function(e) {
+    e.preventDefault();
+    
+    var parameter_nameInput = $('input[name="parameter_name"]').val().trim();
+    var descriptionInput = $('textarea[name="description"]').val().trim();
+    var measurement_unitInput = $('input[name="measurement_unit"]').val().trim();
+
+    if (parameter_nameInput && descriptionInput && measurement_unitInput) {
+        $.ajax({
+            url: '{% url "parameter-create" %}',
+            data: {
+                'parameter_name': parameter_nameInput,
+                'description': descriptionInput,
+                'measurement_unit': measurement_unitInput
+            },
+            dataType: 'json',
+            success: function (data) {
+              if (data) {
+                //console.log(data.parameter)
+                appendToParameterList(data.parameter);
+                swal({
+                  title: "Success!",
+                  text: data.parameter.parameter_name + " has been added successfully!",
+                  icon: "success",
+                  button: "OK",
+                });
+              }
+            },
+            error: function(data){
+              swal({
+                  title: "Error!",
+                  text:  "An error occured, unable to add inputted data!",
+                  icon: "error",
+                  button: "OK",
+              });
+            }  
+        }); 
+      } else {
+        swal({
+          title: "Error!",
+          text:  "All fields must have a valid value.",
+          icon: "error",
+          button: "OK",
+        });
+    }
+    $('#add_form').trigger("reset");
+    $('#add_modal').modal('hide');
+});
+
+//display created/stored data
+function appendToParameterList(parameter) {
+  $("#parameter_table > tbody").prepend(`
+        <tr id="parameter-${parameter.id}">
+            <td class="parameterName parameterData" name="parameter_name">${parameter.parameter_name}</td>
+            '<td class="parameterDescription parameterData" name="description">${parameter.description}</td>
+            '<td class="parameterMeasurementUnit parameterData" name="measurement_unit">${parameter.measurement_unit}</td>
+            '<td>
+                <i class="bi bi-eye-fill text-success" type="button"></i> &nbsp
+                <i class="bi bi-pencil-fill text-primary" type="button" onClick="editParameter(${parameter.id})" data-bs-toggle="modal" data-bs-target="#edit_modal"></i> &nbsp
+                <i class="bi bi-trash-fill text-warning" onClick="deleteParameter(${parameter.id})" type="button"></i>
+            </td>
+        </tr>
+    `);
+}
+
+//edit
+function editParameter(id) {
+  if (id) {
+    tr_id = "#parameter-" + id;
+    parameter_name = $(tr_id).find(".parameterName").text();
+    description = $(tr_id).find(".parameterDescription").text();
+    measurement_unit = $(tr_id).find(".parameterMeasurementUnit").text();
+    $('#id').val(id);
+    $('#parameter_name').val(parameter_name);
+    $('#description').val(description);
+    $('#measurement_unit').val(measurement_unit);
+  }
+}
+
+//update
+$("#edit_form").on('submit',function(e) {
+    e.preventDefault();
+
+    var idInput = $('input[name="id"]').val().trim();
+    var parameter_nameInput = $('input[id="parameter_name"]').val().trim();
+    var descriptionInput = $('textarea[id="description"]').val().trim();
+    var measurement_unitInput = $('input[id="measurement_unit"]').val().trim();
+
+    if (parameter_nameInput && descriptionInput && measurement_unitInput) {
+        $.ajax({
+            url: '{% url "parameter-update" %}',
+            data: {
+                'id': idInput,
+                'parameter_name': parameter_nameInput,
+                'description': descriptionInput,
+                'measurement_unit': measurement_unitInput
+            },
+            dataType: 'json',
+            success: function (data) {
+                if (data) {
+                  //console.log(data.parameter)
+                  updateToParamaterList(data.parameter);
+                  swal({
+                    title: "Success!",
+                    text: data.parameter.parameter_name + " has been updated successfully!",
+                    icon: "success",
+                    button: "OK",
+                  });
+                }
+            },
+            error: function(data){
+              swal({
+                  title: "Error!",
+                  text:  "An error occured, unable to updated inputted data!",
+                  icon: "error",
+                  button: "OK",
+              });
+            } 
+        });
+       } else {
+        swal({
+          title: "Error!",
+          text:  "All fields must have a valid value.",
+          icon: "error",
+          button: "OK",
+        });
+    }
+    $('#edit_form').trigger("reset");
+    $('#edit_modal').modal('hide');
+});
+
+//display updated data
+function updateToParamaterList(parameter){
+    $("#parameter_table #parameter-" + parameter.id).children(".parameterData").each(function() {
+        var attr = $(this).attr("name");
+        if (attr == "parameter_name") {
+          $(this).text(parameter.parameter_name);
+        } else if (attr == "description") {
+          $(this).text(parameter.description);
+        } else if (attr == "measurement_unit"){
+          $(this).text(parameter.measurement_unit);
+        }
+      });
+}
+
+//destroy
+function deleteParameter(id) {
+  swal({
+    text: "Are you sure you would like to delete this record?",
+    icon: "warning",
+    buttons: {
+    cancel: "No, Cancel",
+    confirm: {
+     text: "Yes, Delete",
+     value: "confirm",
+   }  
+  },
+  })
+  .then( function(value) {
+    switch (value) {
+ 
+    case "confirm":
+     $.ajax({
+        url: '{% url "parameter-delete" %}',
+        data: {
+            'id': id,
+        },
+        dataType: 'json',
+        success: function (data) {
+            if (data.deleted) {
+              $("#parameter_table #parameter-" + id).remove();
+            }
+        },
+        error: function(data){
+          swal({
+            title: "Error!",
+            text:  "An error occured, unable to delete selected data!",
+            icon: "error",
+            button: "OK",
+          });
+        }
+    });
+    break;
+  }
+  });
+}
+
+//reset add form 
+$('#add_modal').on('hidden.bs.modal', function () {
+  $('#add_form').trigger("reset");
+})
+</script>
+{% endblock javascript %}
+

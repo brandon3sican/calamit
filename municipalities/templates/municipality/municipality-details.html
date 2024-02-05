@@ -1,0 +1,66 @@
+{% extends 'dashboard-layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Municipality</h1>
+        <nav>
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'dashboard-home'%}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'municipality-list'%}">Municipality</a></li>
+            <li class="breadcrumb-item active">{{ municipality.municipality_name }}</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">{{ municipality.municipality_name }}
+                
+                <form method="POST" action="{% url 'municipality-delete' municipality.id %}" class="float-end">
+                    <a href="../update/{{municipality.id}}"><i class="bi bi-pencil-fill text-primary" type="button"></i></a> &nbsp
+
+                    {% csrf_token %}
+                    <i class="bi bi-trash-fill text-warning show_confirm" type="button"></i>
+                </form>
+                </h5>
+
+                <p class="card-text">{{ municipality.description }}</p>
+                <p class="card-text">Contact Person: {{ municipality.contact_person }}</p>
+                <p class="card-text">Contact Number: {{ municipality.contact_number }}</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+</main>
+{% endblock content %}
+
+{% block javascript %}
+  <script>
+  $('.show_confirm').click(function(event) {
+    var form =  $(this).closest("form");
+    event.preventDefault();
+    swal({
+        text: "Are you sure you want to permanently delete this record?",
+        icon: "warning",
+        buttons: {
+          cancel: "No, Cancel",
+          confirm: {
+            text: "Yes, Delete",
+            value: "confirm"
+          }  
+        }
+    })
+    .then((willDelete) => {
+        if (willDelete) {
+            form.submit();
+        }
+    });
+  });
+  </script>
+{% endblock javascript%}

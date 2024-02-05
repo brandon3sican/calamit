@@ -1,0 +1,302 @@
+{% extends 'dashboard-layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Thresholds</h1>
+        <nav>
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'dashboard-home'%}">Home</a></li>
+            <li class="breadcrumb-item">Threshold</li>
+            <li class="breadcrumb-item active">List</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Particle Size</h5>
+                <!-- List of Soil Parameters -->
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Lower Limit</th>
+                      <th scope="col">Upper Limit</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">0.074</td>
+                      <td>0.420</td>
+                      <td>Fine Sand</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">0.421</td>
+                      <td>2.000</td>
+                      <td>Medium Sand</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">2.001</td>
+                      <td>4.760</td>
+                      <td>Course Sand</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">4.761</td>
+                      <td>19.050</td>
+                      <td>Fine Gravel</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">19.051</td>
+                      <td>76.200</td>
+                      <td>Course Sand</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End List of Soil Parameters -->
+
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Saturation</h5>
+                <!-- List of Soil Parameters -->
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Lower Limit</th>
+                      <th scope="col">Upper Limit</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>25</td>
+                      <td>Humid</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">26</td>
+                      <td>50</td>
+                      <td>Damp</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">51</td>
+                      <td>75</td>
+                      <td>Moist</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">76</td>
+                      <td>99</td>
+                      <td>Wet</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">100</td>
+                      <td>100</td>
+                      <td>Saturated</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End List of Soil Parameters -->
+
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Angle of Friction</h5>
+                <!-- List of Soil Parameters -->
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Lower Limit</th>
+                      <th scope="col">Upper Limit</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>30</td>
+                      <td>Very Loose</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">31</td>
+                      <td>35</td>
+                      <td>Loose</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">36</td>
+                      <td>40</td>
+                      <td>Compact</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">41</td>
+                      <td>45</td>
+                      <td>Dense</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">46</td>
+                      <td>100</td>
+                      <td>Very Dense</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End List of Soil Parameters -->
+
+              </div>
+          </div>
+        </div>
+
+         <div class="col-lg-6">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Consistency</h5>
+                <!-- List of Soil Parameters -->
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Lower Limit</th>
+                      <th scope="col">Upper Limit</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">0.01</td>
+                      <td>0.99</td>
+                      <td>Very Soft</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>2.99</td>
+                      <td>Soft</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">3</td>
+                      <td>5.99</td>
+                      <td>Firm</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">6</td>
+                      <td>11.99</td>
+                      <td>Stiff</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">12</td>
+                      <td>23.99</td>
+                      <td>Very Stiff</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                     <tr>
+                      <td scope="row">24</td>
+                      <td>100</td>
+                      <td>Hard</td>
+                      <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                          <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                          <i class="bi bi-trash-fill text-warning"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End List of Soil Parameters -->
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+{% endblock content %}

@@ -1,0 +1,87 @@
+{% extends 'dashboard-layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Landslide Information</h1>
+        <nav>
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'dashboard-home'%}">Home</a></li>
+            <li class="breadcrumb-item">Landslide</li>
+            <li class="breadcrumb-item active">List</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Landslide</h5>
+              
+
+              <!-- List of Soil Parameters -->
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Date and Time</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">04/12/2022</td>
+                    <td>Lorem Ipsum Dolor</td>
+                    <td>Wangal, La Trinidad</td>
+                    <td>On going</td>
+                    <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                        <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                        <i class="bi bi-trash-fill text-warning"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">04/12/2022</td>
+                    <td>Lorem Ipsum Dolor</td>
+                    <td>Ampucao, Itogon</td>
+                    <td>On going</td>
+                    <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                        <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                        <i class="bi bi-trash-fill text-warning"></i>
+                    </td>
+                  </tr>
+                 <tr>
+                    <td scope="row">04/10/2022</td>
+                    <td>Lorem Ipsum Dolor</td>
+                    <td>Sitio 1, Sablan</td>
+                    <td>On going</td>
+                    <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                        <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                        <i class="bi bi-trash-fill text-warning"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">06/10/2022</td>
+                    <td>Lorem Ipsum Dolor Sit Amit</td>
+                    <td>Sitio 2, Sablan</td>
+                    <td>Mitigated</td>
+                    <td><i class="bi bi-eye-fill text-success"></i> &nbsp
+                        <i class="bi bi-pencil-fill text-primary"></i> &nbsp
+                        <i class="bi bi-trash-fill text-warning"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End List of Soil Parameters -->
+ 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+{% endblock content %}
